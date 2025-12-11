@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Авторизация</title>
+</head>
+<body>
+    <h1>Вход в систему</h1>
+    
+    {{#if message}}
+        <p style="color:red">{{message}}</p>
+    {{/if}}
+    
+    <form action="/login" method="POST">
+        <label>Логин:</label>
+        <input type="text" name="username" /><br/><br/>
+        <label>Пароль:</label>
+        <input type="password" name="password" /><br/><br/>
+        <button type="submit">Войти</button>
+    </form>
+</body>
+</html>

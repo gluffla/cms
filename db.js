@@ -1,9 +1,9 @@
-import mysql from "mysql2/promise";
-
+import mysql from "mysql2/promise"; // promise-версия, чтобы использовать async/await
 import dotenv from "dotenv";
 dotenv.config();
 
 export async function getConnection() {
+  // возвращаем соединение
   return mysql.createConnection({
     host: process.env.DB_HOST || "localhost",
     user: process.env.DB_USER || "cms_user",
